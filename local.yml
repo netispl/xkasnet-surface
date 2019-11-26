@@ -22,8 +22,8 @@
       copy:
         src: xKasNet.desktop
         dest: /home/testowy/Pulpit/
-        owner: kasa
-        group: kasa
+        owner: testowy
+        group: testowy
         mode: '0777' 
 
     - name: Dodanie usera ansiblenet
