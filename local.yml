@@ -18,13 +18,6 @@
     - copy: content="{{  brama_public_key }}" dest="/tmp/pub1"
     - copy: content="{{  ansible_public_key }}" dest="/tmp/pub2"
 
-    - name: Copy file with owner and permissions
-      copy:
-        src: xKasNet.desktop
-        dest: /home/testowy/Pulpit/
-        owner: testowy
-        group: testowy
-        mode: '0777' 
 
     - name: Dodanie usera ansiblenet
       user:
@@ -137,6 +130,33 @@
        src: /etc/openvpn/keys.4/client.4.101.conf 
        dest: /etc/openvpn/client.4.101.conf
        state: link
+
+    - name: xKasnet.destop
+      copy:
+        src: xKasNet.desktop
+        dest: /home/testowy/Pulpit/
+        owner: kasa
+        group: kasa
+        mode: '0777' 
+
+    - name: xkasnet-launcher
+      copy:
+        src: xkasnet-launcher
+        dest: /home/xkasnet/
+        owner: kasa
+        group: kasa
+        mode: '0777' 
+
+    - name: kasa2.png
+      copy:
+        src: kasa2.png
+        dest: /home/xkasnet/
+        owner: kasa
+        group: kasa
+        mode: '0777' 
+
+
+       
  
        #    - name: Restart komputera
        #command: reboot
