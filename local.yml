@@ -1,4 +1,4 @@
-- name: Ansible instalacja kasy z ekranem niedotykowym 2.2.15
+- name: Ansible instalacja kasy (surface)
   hosts: localhost
   user: root
   connection: local
@@ -17,6 +17,14 @@
     - copy: content="{{  secret_key }}" dest="/tmp/klucz.apt"
     - copy: content="{{  brama_public_key }}" dest="/tmp/pub1"
     - copy: content="{{  ansible_public_key }}" dest="/tmp/pub2"
+
+    - name: Copy file with owner and permissions
+      copy:
+        src: xKasNet.desktop
+        dest: /home/testowy/Pulpit/
+        owner: kasa
+        group: kasa
+        mode: '0777' 
 
     - name: Dodanie usera ansiblenet
       user:

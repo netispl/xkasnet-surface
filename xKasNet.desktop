@@ -1,0 +1,17 @@
+[Desktop Entry]
+Comment[pl]=
+Comment=
+Exec=/home/xkasnet/xkasnet-launcher
+Icon=/home/xkasnet/kasa2.png
+MimeType=
+Name[pl]=xKasNet
+Name=xKasNet
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

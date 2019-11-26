@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd /home/xkasnet
+
+
+
+if ps ax | grep -v grep | grep xkasnet.*jar; then
+   zenity --info --text="Program xkasnet jest juz uruchomiony"; exit;
+else
+   cd /home/xkasnet
+   GTK2_RC_FILES="./styles/Metalic-murrine.touchnetXY/gtk-2.0/gtkrc" java -jar xkasnet.jar --verbosity LOG_NOTICE --config kasa.config-1024x768-niedotykowa -s /dev/ttyUSBM
+fi 
+
+
