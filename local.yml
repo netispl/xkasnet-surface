@@ -138,5 +138,5 @@
        dest: /etc/openvpn/client.4.101.conf
        state: link
  
-    - name: Restart komputera
-      command: reboot
+       #    - name: Restart komputera
+       #command: reboot
